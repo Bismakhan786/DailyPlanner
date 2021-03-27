@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Planner</title>
+    <link rel="shortcut icon" type="image/png" href="images/appicon.png">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+          apiKey: "AIzaSyDwTXbEDUeU1Eh306Llg1-fJaF28hIjPDk",
+          authDomain: "dailyplanner-db.firebaseapp.com",
+          databaseURL: "https://dailyplanner-db.firebaseio.com",
+          projectId: "dailyplanner-db",
+          storageBucket: "dailyplanner-db.appspot.com",
+          messagingSenderId: "796018183794",
+          appId: "1:796018183794:web:f1289c00d8a5c834d1bceb",
+          measurementId: "G-RVGHXPMS40"
+        };
+        firebase.initializeApp(firebaseConfig);
+      </script>
+</head>
+<body>
+    <nav class="navbar navbar-light bg-light shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/appicon.png" width="50" height="50" class="d-inline-block align-middle" alt="" loading="lazy">
+                DAILY PLANNER
+              </a>
+        </div>
+      </nav>
+    <div class="container mx-auto text-center my-4 shadow p-4 main">
+        <div>
+            <input type="text" id="todoItem" placeholder="Enter your work" class="mb-2">
+            <button onclick="addWork()" id="add">ADD WORK</button>
+            <button onclick="deleteAll()" id="dlt">DELETE ALL</button>
+        </div>
+        <div class="m-0">
+            <ul id="list">
+
+            </ul>
+        </div>
+    </div>
+    <div class="container-fluid bg-gradient-dark text-light py-2 mt-4 fixed-bottom">
+        <div style="font-size: 12px;" class="text-center">
+            Copyright 
+            <i class="fa fa-copyright" aria-hidden="true"></i>
+            DAILY PLANNER
+        </div>
+    </div>
+</body>
+<script src="app.js"></script>
+</html>
